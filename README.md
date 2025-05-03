@@ -33,11 +33,10 @@ public Response getProduct(@PathParam("id") int id) {
         return Response.status(Response.Status.NOT_FOUND).build();
     return Response.ok(product).build();
 }
-
-
+```
 ### Servlet
 
-@Override
+```@Override
 protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     String idParam = req.getParameter("id");
     if (idParam != null) {
